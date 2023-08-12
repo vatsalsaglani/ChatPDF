@@ -1,3 +1,3 @@
 # ChatPDF
 
-<video src="chat_pdf.mov"></video>
+[![asciicast](https://asciinema.org/a/602211.svg)](https://asciinema.org/a/602211)
