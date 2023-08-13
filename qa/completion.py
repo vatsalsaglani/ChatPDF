@@ -1,6 +1,4 @@
 import openai
-import requests
-
 
 class Completion:
     def __init__(self, api_key: str):
