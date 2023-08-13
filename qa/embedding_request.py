@@ -9,43 +9,6 @@ from time import sleep
 
 from config.config import *
 
-
-# async def gen_embedding(
-#     client_session: aiohttp.ClientSession, url: str, input_text: Dict
-# ):
-#     async with client_session.post(
-#         url,
-#         json={"input": input_text.get("text"), "model": OPENAI_EMBEDDING_MODEL},
-#         headers={
-#             "Authorization": f"Bearer {OPENAI_API_KEY}",
-#             "Content-Type": "application/json",
-#             "Accept": "application/json",
-#         },
-#     ) as response:
-#         data = await response.json()
-#         if data.get("data", [{}])[0].get("embedding", None):
-#             input_text["embedding"] = data.get("data")[0].get("embedding")
-#             return input_text
-#         else:
-#             return input_text
-
-
-# async def __generate_embeddings__(input_texts: List[Dict]):
-#     tasks = []
-#     results = []
-#     async with aiohttp.ClientSession(
-#         timeout=aiohttp.ClientTimeout(total=60)
-#     ) as session:
-#         tasks = [gen_embedding(session, OPENAI_API_URL, t) for t in input_texts]
-
-#         with tqdm(total=len(input_texts)) as pbar:
-#             for ix, coro in asyncio.as_completed(tasks):
-#                 result = await coro
-# if "embedding" in result:
-#     results.append(result)
-#         return results
-
-
 async def http_post(url: str, input_text, cnt: int = 0):
     if cnt > 2:
         return input_text
