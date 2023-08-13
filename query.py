@@ -1,6 +1,5 @@
 import os
 import pinecone
-import pinecone
 from time import sleep
 
 from config.config import OPENAI_API_KEY, PINECONE_API_KEY, PINECONE_ENV
